@@ -1,4 +1,5 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/eglodevelopment/cloud/badge)](https://www.codefactor.io/repository/github/eglodevelopment/cloud)
+[![CodeFactor](https://www.codefactor.io/repository/github/eglodevelopment/nymi/badge/main)](https://www.codefactor.io/repository/github/eglodevelopment/nymi/overview/main)
+
 
 ## Intro
 
