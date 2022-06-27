@@ -17,7 +17,7 @@
 }
 
 .btn {
-  opacity: 0.6;
+  opacity: 0.9;
   transition: 0.5s;
 }
 
@@ -25,7 +25,23 @@
   opacity: 1;
 }
 
+a {
+  opacity: 0.9;
+  transition: 0.5s;
+}
 
+a {
+  opacity: 1;
+}
+
+li {
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+li {
+  opacity: 1;
+}
 
 #div1 {
   margin-top: 30px;

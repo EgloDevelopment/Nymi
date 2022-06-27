@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include('../../../../resources/header.php');
 require_once('../../../../resources/DB/config.php');
