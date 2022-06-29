@@ -12,14 +12,22 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM Files WHERE id ='$id'";
+$sql = "SELECT * FROM files WHERE id ='$id'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
+        $owner = $row['owner'];
+        if ($owner == $_SESSION['owner-id']) {
+            echo '';
+        } else {
+            echo '<script>window.location.href = "../page?a=perm";</script>';
+        }
+        $extension = $row['extension'];
+        $date = $row['date'];
         $parent = $row['parent'];
         $id = $row['id'];
         $name = $row['name'];
-        echo "<div class='center'><iframe src='../files/$id' title='File Viewer' class='viewer' sandbox></iframe><p>$name</p></div>";
+        echo "<div class='center'><iframe src='../files/$id' title='File Viewer' class='viewer' sandbox></iframe><p>$name$extension</p><br><p>$date</p></div>";
     }
 } else {
     echo '<script> window.location.href = "../page?a=load-error";</script>';
@@ -47,7 +55,7 @@ if ($result->num_rows > 0) {
 </div>
 
 <div class="position-absolute top-0 end-0" style="margin-right: 150px">
-    <a href="../">
+    <a href="../page/a/move?i=<?php echo $id ?>&n=<?php echo $name ?>">
         <img src="../resources/images/viewer/move.svg" class="img1">
     </a>
 </div>
@@ -59,7 +67,7 @@ if ($result->num_rows > 0) {
 </div>
 
 <div class="position-absolute top-0 end-0" style="margin-right: 260px">
-    <a href='files/<?php echo $id ?>' download>
+    <a href='../files/<?php echo $id ?>' download>
         <img src="../resources/images/viewer/download.svg" class="img1">
     </a>
 </div>

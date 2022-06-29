@@ -66,6 +66,10 @@ li {
   margin-left: 50px;
 }
 
+#btn5 {
+  margin-right: 10px;
+}
+
 .link1 {
   float: right;
   margin-right: 15px;
@@ -124,4 +128,17 @@ li {
   margin-left: 10px;
   height: 25px;
   width: 25px;
+}
+
+.list-text {
+ margin-left: 10px;
+}
+
+.list-items {
+  margin-right: 5px;
+  float: right;
+}
+
+.seperator {
+  opacity: 0;
 }

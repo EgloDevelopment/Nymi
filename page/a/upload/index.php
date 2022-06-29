@@ -16,7 +16,7 @@ $to = $_GET['l'];
                 <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="Upload">
                 <br>
                 <div class="center">
-                    <button type="submit" class="btn btn-outline-primary" onclick="redir();">Upload</button>
+                    <button type="submit" class="btn btn-outline-primary">Upload</button>
                 </div>
             </form>
             <div class="center">

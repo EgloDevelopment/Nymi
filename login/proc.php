@@ -64,7 +64,7 @@ include('../resources/header-no-secure.php');
                     $_SESSION['last-login'] = $row["date"];
                     $_SESSION['account-created'] = $row["created"];
                     $_SESSION['2fa'] = $row["2fa"];
-                    $_SESSION['dark-mode'] = $row["dark"];
+                    $_SESSION['view'] = $row["view"];
                 }
 
                 $sql = "SELECT * FROM Settings";
@@ -85,17 +85,27 @@ include('../resources/header-no-secure.php');
                     $_SESSION['login-action'] = 'success';
                     $_SESSION['rate-limiter'] = '0';
                     $_SESSION['logout-req'] = 'false';
+
+
+
                     if ($_SESSION['2fa'] === '1') {
                         $_SESSION['2fa-enabled'] = 'false';
                     } else {
                         $_SESSION['2fa-enabled'] = 'true';
                     }
-                    if ($_SESSION['dark-mode'] === '1') {
-                        $_SESSION['dark-enabled'] = 'false';
+
+
+                    if ($_SESSION['view'] === '1') {
+                        $_SESSION['view-option'] = 'grid';
                     } else {
-                        $_SESSION['dark-enabled'] = 'true';
+                        $_SESSION['view-option'] = 'list';
                     }
+
+
                     $_SESSION['logged-in'] = 'true';
+
+
+
                 } else {
                     $_SESSION['login-action'] = 'db-error';
                 }

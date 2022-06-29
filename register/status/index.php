@@ -31,7 +31,7 @@ if ($_SESSION['register-action'] == 'email-exists') {
                         echo 'Please fill out all fields.';
                         echo '<br><p class="center"><a href="../../register">Back</a></p>';
                     } else {
-                        echo 'Error. Please refresh the page.';
+                        echo 'Please refresh the page.';
                     }
                 }
             }

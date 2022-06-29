@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-sleep(1);
+sleep(2);
 session_start();
 include('../../resources/header-no-secure.php');
 
@@ -20,7 +20,7 @@ if ($_SESSION['login-action'] == 'db-error') {
             echo 'Wrong email/password combo.';
             echo '<br><p class="center"><a href="../../login">Back</a></p>';
         } else {
-            echo 'Error. Please refresh the page.';
+            echo 'Please refresh the page.';
         }
     }
 }

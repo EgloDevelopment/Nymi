@@ -17,17 +17,14 @@ if ($_POST['2fa'] == 'option1') {
     $_SESSION['2fa-enabled'] = 'false';
 }
 
-if ($_POST['dark'] == 'option1') {
-    $darkvalue = '2';
-    $_SESSION['dark-enabled'] = 'true';
+if ($_POST['view'] == 'option1') {
+    $viewvalue = '1';
+    $_SESSION['view-option'] = 'grid';
 } else {
-    $darkvalue = '1';
-    $_SESSION['dark-enabled'] = 'false';
+    $viewvalue = '2';
+    $_SESSION['view-option'] = 'list';
 }
 
 $id = $_SESSION['id'];
-$sql = "UPDATE `Users` SET `2fa`='$favalue', `dark`='$darkvalue' WHERE id = '$id'";
+$sql = "UPDATE `Users` SET `2fa`='$favalue', `dark`='$darkvalue', `view`='$viewvalue' WHERE id = '$id'";
 $conn->query($sql);
-
-echo $_POST['dark'];
-echo $_POST['2fa'];

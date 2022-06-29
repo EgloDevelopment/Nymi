@@ -2,7 +2,7 @@
 session_start();
 include('../../../../resources/header.php');
 ?>
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@ include('../../../../resources/header.php');
         </li>
       </ul>
       <form class="d-flex">
-        <a class="btn btn-outline-danger" style="margin-right: 10px;" href="../../../../functions/logout.php">Logout</a>
+        <a class="btn btn-outline-danger" id="btn5" href="../../../../functions/logout.php">Logout</a>
         <a class="btn btn-outline-success" href="../../../../">Home</a>
       </form>
     </div>
@@ -32,38 +32,38 @@ include('../../../../resources/header.php');
 
 
   <form action="../../../../page/a/account/settings/proc.php" method="POST" target="dummyframe">
-    <h5 class="txt2">Dark-mode</h5>
-    <div class="form-check" id="btn3">
-      <input class="form-check-input" type="radio" name="dark" id="exampleRadios1" value="option1" <?php if ($_SESSION['dark-enabled'] == 'true') {
-                                                                                                      echo 'checked';
-                                                                                                    } ?>>
-      <label class="form-check-label" for="exampleRadios1">
-        On
-      </label>
-    </div>
-    <div class="form-check" id="btn4">
-      <input class="form-check-input" type="radio" name="dark" id="exampleRadios2" value="option2" <?php if ($_SESSION['dark-enabled'] == 'false') {
-                                                                                                      echo 'checked';
-                                                                                                    } ?>>
-      <label class="form-check-label" for="exampleRadios2">
-        Off
-      </label>
-    </div>
     <h5 class="txt2">2FA</h5>
     <div class="form-check" id="btn3">
-      <input class="form-check-input" type="radio" name="2fa" id="exampleRadios1" value="option1" <?php if ($_SESSION['2fa-enabled'] == 'true') {
+      <input class="form-check-input" type="radio" name="2fa" id="2fa1" value="option1" <?php if ($_SESSION['2fa-enabled'] == 'true') {
                                                                                                     echo 'checked';
                                                                                                   } ?>>
-      <label class="form-check-label" for="exampleRadios1">
+      <label class="form-check-label" for="2fa1">
         On
       </label>
     </div>
     <div class="form-check" id="btn4">
-      <input class="form-check-input" type="radio" name="2fa" id="exampleRadios2" value="option2" <?php if ($_SESSION['2fa-enabled'] == 'false') {
+      <input class="form-check-input" type="radio" name="2fa" id="2fa2" value="option2" <?php if ($_SESSION['2fa-enabled'] == 'false') {
                                                                                                     echo 'checked';
                                                                                                   } ?>>
-      <label class="form-check-label" for="exampleRadios2">
+      <label class="form-check-label" for="2fa2">
         Off
+      </label>
+    </div>
+    <h5 class="txt2">View</h5>
+    <div class="form-check" id="btn3">
+      <input class="form-check-input" type="radio" name="view" id="view1" value="option1" <?php if ($_SESSION['view-option'] == 'grid') {
+                                                                                                    echo 'checked';
+                                                                                                  } ?>>
+      <label class="form-check-label" for="view1">
+        Grid
+      </label>
+    </div>
+    <div class="form-check" id="btn4">
+      <input class="form-check-input" type="radio" name="view" id="view2" value="option2" <?php if ($_SESSION['view-option'] == 'list') {
+                                                                                                    echo 'checked';
+                                                                                                  } ?>>
+      <label class="form-check-label" for="view2">
+        List
       </label>
     </div>
     <button class="btn btn-outline-primary" id="btn3" onclick="redir();" type="submit">Update</button>

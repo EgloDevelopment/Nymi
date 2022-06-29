@@ -20,7 +20,7 @@ $to = $_GET['l'];
                     </div>
                     <br>
                     <div class="center">
-                        <button type="submit" class="btn btn-outline-primary" onclick="redir();">Upload</button>
+                        <button type="submit" class="btn btn-outline-primary">Upload</button>
                     </div>
                 </form>
                 <div class="center">
