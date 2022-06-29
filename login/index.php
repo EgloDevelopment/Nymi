@@ -9,6 +9,17 @@ if ($_SESSION['logged-in'] == 'true') {
 } else {
     echo '';
 }
+
+if (!isset($_COOKIE['token'])) {
+    echo '';
+} else {
+    if ($_COOKIE['token'] == 'logged-out') {
+        echo '';
+    } else {
+        echo '<script>window.location.href = "../login/token";</script>';
+    }
+}
+
 ?>
 
 <!DOCTYPE html>

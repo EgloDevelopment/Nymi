@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include('../resources/header-no-secure.php');
 //error_reporting(0);
@@ -33,7 +32,7 @@ include('../resources/header-no-secure.php');
     }
 
 
-    $sql = "SELECT id, email, password FROM Users WHERE email = '$escemail'";
+    $sql = "SELECT id, email, password FROM users WHERE email = '$escemail'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -48,7 +47,7 @@ include('../resources/header-no-secure.php');
 
     if ($dbemail == $escemail) {
         if ($dbpassword == $escpassword) {
-            $sql = "SELECT * FROM Users WHERE id = '$id'";
+            $sql = "SELECT * FROM users WHERE id = '$id'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -81,6 +80,7 @@ include('../resources/header-no-secure.php');
                     $date = gmdate("Y/m/j H:i:s", time() + 3600 * ($timezone + date("I")));
                     $tokensql = "UPDATE Users SET token = '$token', date = '$date' WHERE id = $id";
                     $conn->query($tokensql);
+                    setcookie('token', $token, time() + (30 * 24 * 60 * 60 * 1000), "/"); // 30 days
                     $_SESSION['auth-token'] = $token;
                     $_SESSION['login-action'] = 'success';
                     $_SESSION['rate-limiter'] = '0';
