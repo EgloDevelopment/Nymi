@@ -74,7 +74,7 @@ echo '<hr>';
 } else {
   echo '<div class="position-absolute top-50 start-50 translate-middle">';
   echo '<p class="center">';
-  echo "Huh, no files here, upload some?";
+  echo "Huh, no files here, delete some?";
   echo '</p>';
 }
 ?>

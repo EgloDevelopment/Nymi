@@ -30,6 +30,6 @@ $current = $_GET['n'];
 
 <script>
     function redir() {
-        window.location.href = "../../../";
+        window.location.href = "../../../trash";
     }
 </script>

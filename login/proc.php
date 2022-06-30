@@ -62,7 +62,6 @@ include('../resources/header-no-secure.php');
                     $_SESSION['owner-id'] = $row["ownerid"];
                     $_SESSION['last-login'] = $row["date"];
                     $_SESSION['account-created'] = $row["created"];
-                    $_SESSION['2fa'] = $row["2fa"];
                     $_SESSION['view'] = $row["view"];
                 }
 
@@ -73,6 +72,7 @@ include('../resources/header-no-secure.php');
                     while ($row = $result->fetch_assoc()) {
                         $_SESSION['rate-limit'] = $row["ratelimit"];
                         $_SESSION['url'] = $row["url"];
+                        $maxupload = $row['max'];
                     }
 
                     $token = getString(20);
@@ -87,19 +87,13 @@ include('../resources/header-no-secure.php');
                     $_SESSION['logout-req'] = 'false';
 
 
-
-                    if ($_SESSION['2fa'] === '1') {
-                        $_SESSION['2fa-enabled'] = 'false';
-                    } else {
-                        $_SESSION['2fa-enabled'] = 'true';
-                    }
-
-
                     if ($_SESSION['view'] === '1') {
                         $_SESSION['view-option'] = 'grid';
                     } else {
                         $_SESSION['view-option'] = 'list';
                     }
+
+                    $_SESSION['max-upload'] = ($maxupload * 1000);
 
 
                     $_SESSION['logged-in'] = 'true';

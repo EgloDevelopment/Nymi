@@ -9,6 +9,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $id = $_POST['ID'];
-$sql = "DELETE FROM Files WHERE id='$id'";
+$sql = "DELETE FROM files WHERE id='$id'";
 $conn->query($sql);
 unlink("../../../files/$id");

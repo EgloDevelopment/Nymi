@@ -16,7 +16,11 @@ if ($_GET['a'] == 'rate') {
         } else {
             if ($_GET['a'] == 'js') {
                 echo 'Javascript is required to run this page';
-            }
+            } else {
+                if ($_GET['a'] == 'error') {
+                    echo 'Sorry, we encountered an error.';
+                }
         }
     }
+}
 }

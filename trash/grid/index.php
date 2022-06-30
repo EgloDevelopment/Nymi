@@ -3,6 +3,7 @@ error_reporting(0);
 session_start();
 include('../../resources/header.php');
 $parent = $_SESSION['trash-id'];
+$to = $_SESSION['files-id'];
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -26,12 +27,12 @@ $parent = $_SESSION['trash-id'];
             Upload
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="../../page/a/upload/?l=<?php echo $parent ?>">Upload file</a></li>
-            <li><a class="dropdown-item" href="../../page/a/upload/folder?l=<?php echo $parent ?>">Upload folder</a></li>
+            <li><a class="dropdown-item" href="../../page/a/upload/?l=<?php echo $to ?>">Upload file</a></li>
+            <li><a class="dropdown-item" href="../../page/a/upload/folder?l=<?php echo $to ?>">Upload folder</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="../../page/a/upload/folder/new?l=<?php echo $parent ?>">New folder</a></li>
+            <li><a class="dropdown-item" href="../../page/a/upload/folder/new?l=<?php echo $to ?>">New folder</a></li>
           </ul>
         </li>
       </ul>
@@ -135,7 +136,7 @@ if ($result->num_rows > 0) {
 } else {
   echo '<div class="position-absolute top-50 start-50 translate-middle">';
   echo '<p class="center">';
-  echo "Huh, no files here, upload some?";
+  echo "Huh, no files here, delete some?";
   echo '</p>';
   echo '</div>';
 }

@@ -32,23 +32,6 @@ include('../../../../resources/header.php');
 
 
   <form action="../../../../page/a/account/settings/proc.php" method="POST" target="dummyframe">
-    <h5 class="txt2">2FA</h5>
-    <div class="form-check" id="btn3">
-      <input class="form-check-input" type="radio" name="2fa" id="2fa1" value="option1" <?php if ($_SESSION['2fa-enabled'] == 'true') {
-                                                                                                    echo 'checked';
-                                                                                                  } ?>>
-      <label class="form-check-label" for="2fa1">
-        On
-      </label>
-    </div>
-    <div class="form-check" id="btn4">
-      <input class="form-check-input" type="radio" name="2fa" id="2fa2" value="option2" <?php if ($_SESSION['2fa-enabled'] == 'false') {
-                                                                                                    echo 'checked';
-                                                                                                  } ?>>
-      <label class="form-check-label" for="2fa2">
-        Off
-      </label>
-    </div>
     <h5 class="txt2">View</h5>
     <div class="form-check" id="btn3">
       <input class="form-check-input" type="radio" name="view" id="view1" value="option1" <?php if ($_SESSION['view-option'] == 'grid') {
