@@ -22,27 +22,29 @@ The cloud service itself is really easy to install, but setting up the database 
 
 
 
-1. Run ```https://github.com/EgloDevelopment/Nymi.git``` in the direectory you want to install Nymi in.
+1. Run ```git clone https://github.com/EgloDevelopment/Nymi.git``` in the direectory you want to install Nymi in.
 
-2. Open ```resources/DB/config.php``` and set the values to your database credentials.
+2. Extract the files from the ```nymi``` folder into your main directory.
 
-3. Go to ```resources/DB``` and find the ```config.sql``` file.
+3. Open ```resources/DB/config.php``` and set the values to your database credentials.
 
-4. Create a new databse named ```nymi``` and go to the import tab and click ```choose file``` (PHPMyAdmin).
+4. Go to ```resources/DB``` and find the ```config.sql``` file.
 
-5. Upload the ```config.sql``` file.
+5. Create a new databse named ```nymi``` and go to the import tab and click ```choose file``` (PHPMyAdmin).
 
-6. Scroll down and click ```Do not use AUTO_INCREMENT for zero values``` and set it to ```no``` (PHPMyAdmin).
+6. Upload the ```config.sql``` file.
 
-7. Click ```import``` and wait for it to finish, the database should now be setup.
+7. Scroll down and click ```Do not use AUTO_INCREMENT for zero values``` and set it to ```no``` (PHPMyAdmin).
 
-8. Go to the ```settings``` table inside the new database and set ```url``` to your servers url.
+8. Click ```import``` and wait for it to finish, the database should now be setup.
 
-9. Run your server and go to ```server-url/register``` and input your credentials.
+9. Go to the ```settings``` table inside the new database and set ```url``` to your servers url.
 
-10. Go to ```server-url/login``` and login with your credentials.
+10. Run your server and go to ```server-url/register``` and input your credentials.
 
-11. Nymi should now be installed and ready to use, if you have any errors please email ```contact@eglo.pw```.
+11. Go to ```server-url/login``` and login with your credentials.
+
+12. Nymi should now be installed and ready to use, if you have any errors please email ```contact@eglo.pw```.
 
 
 
