@@ -1,9 +1,4 @@
 <?php
-/*
-define('DB_SERVER', 'database-1.caxwicrpfcuz.us-east-2.rds.amazonaws.com');
-define('DB_USERNAME', 'admin');
-define('DB_PASSWORD', 'toasteriscool');
-define('DB_NAME', 'nymi');*/
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');

@@ -16,13 +16,22 @@ $sql = "SELECT * FROM files WHERE id ='$id'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
+        $pref = $row['sharing'];
         $owner = $row['owner'];
+        if ($pref == '2') {
         $extension = $row['extension'];
         $date = $row['date'];
         $parent = $row['parent'];
         $id = $row['id'];
         $name = $row['name'];
         echo "<div class='center'><iframe src='../../files/$id' title='File Viewer' class='viewer' sandbox></iframe><p>$name$extension</p><br><p>$date</p></div>";
+        } else {
+            if ($owner == $_SESSION['owner-id']) {
+                echo "<script>window.location.href = '../../view?i=$id';</script>";
+            } else {
+                echo "<script>window.location.href = '../../page?a=perm';</script>";
+            }
+        }
     }
 } else {
     echo '<script> window.location.href = "../../page?a=load-error";</script>';

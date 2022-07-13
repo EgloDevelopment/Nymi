@@ -43,7 +43,7 @@ include('../resources/header-no-secure.php');
         echo "";
     }
 
-    if ($password1 === $password2) {
+    if ($password1 == $password2) {
         echo '';
     } else {
         $_SESSION['register-action'] = 'password-match';
@@ -86,7 +86,7 @@ include('../resources/header-no-secure.php');
     if ($result->num_rows > 0) {
         $_SESSION['register-action'] = 'email-exists';
     } else {
-        $sql = "INSERT INTO `users`(`email`, `password`, `firstname`, `lastname`, `date`, `token`, `filesid`, `trashid`, `ownerid`, `2fa`) VALUES ('$escemail','$escpassword','$escfirstname','$esclastname','first-login','first-login','$fileid', '$trashid', '$ownerid','1')";
+        $sql = "INSERT INTO `users`(`email`, `password`, `firstname`, `lastname`, `date`, `token`, `filesid`, `trashid`, `ownerid`, `view`) VALUES ('$escemail','$escpassword','$escfirstname','$esclastname','first-login','first-login','$fileid', '$trashid', '$ownerid', '1')";
 
         if ($conn->query($sql) === TRUE) {
             $_SESSION['register-action'] = 'success';

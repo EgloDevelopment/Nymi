@@ -70,9 +70,7 @@ include('../resources/header-no-secure.php');
 
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        $_SESSION['rate-limit'] = $row["ratelimit"];
                         $_SESSION['url'] = $row["url"];
-                        $maxupload = $row['max'];
                     }
 
                     $token = getString(20);
@@ -92,8 +90,6 @@ include('../resources/header-no-secure.php');
                     } else {
                         $_SESSION['view-option'] = 'list';
                     }
-
-                    $_SESSION['max-upload'] = ($maxupload * 1000);
 
 
                     $_SESSION['logged-in'] = 'true';

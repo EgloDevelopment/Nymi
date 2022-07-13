@@ -19,8 +19,7 @@ $current = $_GET['n'];
                     <label class="input-group-text" for="inputGroupSelect01">Who can view</label>
                     <select class="form-select" name="pref" id="inputGroupSelect01">
                         <option value="1">Only me</option>
-                        <option value="2">Nymi users</option>
-                        <option value="3">Anyone</option>
+                        <option value="2">Anyone</option>
                     </select>
                 </div>
                 <br>
