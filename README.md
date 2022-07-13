@@ -8,8 +8,12 @@ This is the Nymi Cloud Platform, thats pretty much it, lol.
 ## About
 
 Here at Nymi (Eglo Development) we want to provide free cloud storage for all, without the small limits, in current times, 15GB won't get you far, which is why we are
-are giving 100GB of free storage to everyone, but there is always a catch, right? You're not wrong, the only catch is ads, we display ads on the upload page and
+are giving 50GB of free storage to everyone, but there is always a catch, right? You're not wrong, the only catch is ads, we display ads on the upload page and
 other pages, these ads are unobtrusive and are only there so we can provide the best storage for free.
+
+
+
+(ATTENTION: This service is not available currently as we are working with AWS and Google to setup servers and ads.)
 
 ## Thank you
 
